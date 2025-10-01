@@ -1,0 +1,17 @@
+{
+  "name": "vulnerable-http-server",
+  "version": "1.0.0",
+  "description": "A deliberately vulnerable HTTP server for security lab",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "security",
+    "vulnerable",
+    "lab"
+  ],
+  "author": "",
+  "license": "ISC"
+}
