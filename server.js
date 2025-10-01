@@ -3,7 +3,7 @@ const url = require('url');
 const fs = require('fs');
 
 const DB_PASSWORD = 'SuperSecret123!';
-const API_KEY = 'sk_live_51234567890abcdefghijklmnop';
+const API_KEY = 'sk_test_EXAMPLE_fake_key_for_lab_purposes_only';
 const JWT_SECRET = 'my-super-secret-jwt-key-12345';
 
 const dbConfig = {

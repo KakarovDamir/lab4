@@ -7,9 +7,9 @@
     "database": "production_db"
   },
   "api": {
-    "stripeKey": "sk_live_51234567890abcdefghijklmnop",
-    "twilioKey": "AC1234567890abcdefghijklmnop",
-    "twilioSecret": "your_twilio_secret_token_12345"
+    "stripeKey": "sk_test_EXAMPLE_fake_key_for_lab",
+    "twilioKey": "AC_EXAMPLE_fake_twilio_key",
+    "twilioSecret": "EXAMPLE_fake_secret_token"
   },
   "jwt": {
     "secret": "my-super-secret-jwt-key-12345",
