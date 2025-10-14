@@ -1,26 +1,51 @@
 # Vulnerable HTTP Server - Lab 4
 
-Simple HTTP server demonstrating common security vulnerabilities and their fixes.
+Simple HTTP server demonstrating common security vulnerabilities.
 
-## Security Vulnerabilities Demonstrated
+## Installation
 
-This project was created to demonstrate the following security issues:
+```bash
+npm install
+```
 
-### 1. **Hardcoded Secrets** ❌
-- API keys, passwords, and JWT secrets hardcoded in source code
-- Located in: `server.js` (lines 5-7) and `config.json`
+## Running the server
 
-### 2. **Information Exposure via Error Messages** ❌
-- Stack traces exposed to users
-- Database configuration leaked in error responses
-- File system paths and Node.js version exposed
-- Located in: `server.js` error handlers
+```bash
+npm start
+```
 
-### 3. **Configuration File with Secrets in Repository** ❌
-- `config.json` committed to GitHub with real credentials
-- No `.gitignore` protection for sensitive files
+The server will run on `http://localhost:3000`
 
-### 4. **Unsafe Deserialization** ❌
-- No input validation on JSON data
-- No size limits (vulnerable to DoS attacks)
-- Located in: `/api/process` and `/api/payment` endpoints
+## Available Endpoints
+
+- `GET /` - Home page with API information
+- `GET /api/user/:id` - Get user by ID
+- `GET /api/config` - Get system configuration
+- `POST /api/process` - Process user data
+- `POST /api/payment` - Process payment
+
+## Testing the endpoints
+
+### Test error handling
+```bash
+curl http://localhost:3000/api/user/1
+```
+
+### Test config endpoint
+```bash
+curl http://localhost:3000/api/config
+```
+
+### Test data processing
+```bash
+curl -X POST http://localhost:3000/api/process \
+  -H "Content-Type: application/json" \
+  -d '{"name":"John","data":"test"}'
+```
+
+### Test payment endpoint
+```bash
+curl -X POST http://localhost:3000/api/payment \
+  -H "Content-Type: application/json" \
+  -d '{"amount":100,"currency":"USD"}'
+```
